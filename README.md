@@ -71,86 +71,16 @@
 
 
 |Name of the function|Header file|Prototyp|
-
 |---|---|---|
-
 |access, faccessat|<fcntl.h>/<unistd.h>|int faccessat(int dirfd, const char *pathname, int mode, int flags)|
-
 |chdir, fchdir|<unistd.h>| int chdir(const char *path); / int fchdir(int fd);|
-
-| close|<unistd.h>|int close(int fd);|
-
-|closedir|<sys/types.h> / <dirent.h>|int closedir(DIR *dirp);|
-
-|execve|<unistd.h>|int execve(const char *pathname, char *const argv[],char *const envp[]);|
-
-|exit|<stdlib.h>|void exit(int status);|
-
-| _Exit, _exit|<stdlib.h>//<unistd.h>|void _Exit(int status);//void _exit(int status);|
-
-|fflush|<stdio.h>|int fflush(FILE *stream);|
-
-|fork	|pid_t fork(void)	|unistd.h|
-
+| close|<unistd.h>|int close(int fd);||closedir|<sys/types.h> / <dirent.h>|int closedir(DIR *dirp);||execve|<unistd.h>|int execve(const char *pathname, char *const argv[],char *const envp[]);||exit|<stdlib.h>|void exit(int status);|| _Exit, _exit|<stdlib.h>//<unistd.h>|void _Exit(int status);//void _exit(int status);||fflush|<stdio.h>|int fflush(FILE *stream);||fork	|pid_t fork(void)	|unistd.h|
 |free	|void free(void *ptr)	|stdlib.h|
-
-|getcwd	|char *getcwd(char *buf, size_t size)	|unistd.h|
-
-|getline|	ssize_t getline(char **lineptr, size_t *n, FILE *stream)	|stdio.h|
-
-|getpid	|pid_t getpid(void)	|unistd.h|
-
-|isatty	|int isatty(int fd)	|unistd.h|
-
-|kill	|int kill(pid_t pid, int sig)	|signal.h|
-
-|malloc|	void *malloc(size_t size)	|stdlib.h|
-
-|open	|int open(const char *pathname, int flags, mode_t mode)	|fcntl.h|
-
-|opendir	|DIR *opendir(const char *name)	|dirent.h|
-
-|perror	|void perror(const char *s)	|stdio.h|
-
-|read	|ssize_t read(int fd, void *buf, size_t count)	|unistd.h|
-
-|readdir	|struct dirent *readdir(DIR *dirp)	|dirent.h|
-
-|signal	|sig_t signal(int sig, sig_t handler)	|signal.h|
-
-|stat	|int stat(const char *pathname, struct stat *buf)|	sys/stat.h|
-
-|lstat	|int lstat(const char *pathname, struct stat *buf)	|sys/stat.h|
-
-|fstat	|int fstat(int fd, struct stat *buf)	|sys/stat.h|
-
-|strtok	|char *strtok(char *s1, const char *s2)	|string.h|
-
-|wait	|int wait(int *status)	|sys/wait.h|
-
-|waitpid	|pid_t waitpid(pid_t pid, int *status, int options)	|sys/wait.h|
-
-|wait3	|int wait3(int *status, int options, struct rusage *rusage)	|sys/wait.h|
-
-|wait4	|int wait4(pid_t pid, int *status, int options, struct rusage *rusage)	|sys/wait.h|
-
-|write	|ssize_t write(int fd, const void *buf, size_t count)	|unistd.h|
-
----
+|getcwd	|char *getcwd(char *buf, size_t size)	|unistd.h||getline|	ssize_t getline(char **lineptr, size_t *n, FILE *stream)	|stdio.h||getpid	|pid_t getpid(void)	|unistd.h||isatty	|int isatty(int fd)	|unistd.h||kill	|int kill(pid_t pid, int sig)	|signal.h||malloc|	void *malloc(size_t size)	|stdlib.h||open	|int open(const char *pathname, int flags, mode_t mode)	|fcntl.h||opendir	|DIR *opendir(const char *name)	|dirent.h||perror	|void perror(const char *s)	|stdio.h||read	|ssize_t read(int fd, void *buf, size_t count)	|unistd.h||readdir	|struct dirent *readdir(DIR *dirp)	|dirent.h||signal	|sig_t signal(int sig, sig_t handler)	|signal.h||stat	|int stat(const char *pathname, struct stat *buf)|	sys/stat.h||lstat	|int lstat(const char *pathname, struct stat *buf)	|sys/stat.h||fstat	|int fstat(int fd, struct stat *buf)	|sys/stat.h||strtok	|char *strtok(char *s1, const char *s2)	|string.h||wait	|int wait(int *status)	|sys/wait.h||waitpid	|pid_t waitpid(pid_t pid, int *status, int options)	|sys/wait.h||wait3	|int wait3(int *status, int options, struct rusage *rusage)	|sys/wait.h||wait4	|int wait4(pid_t pid, int *status, int options, struct rusage *rusage)	|sys/wait.h||write	|ssize_t write(int fd, const void *buf, size_t count)	|unistd.h|---
 
 
 
 ### 1-File access
-
-
-
-
-
-int access(const char *pathname, int mode);
-
-
-
-
 
 The access() function in C is used to check whether the calling process can access a specific file. Here’s the prototype of the access() function:
 
